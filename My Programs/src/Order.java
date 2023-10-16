@@ -1,0 +1,88 @@
+import java.util.Arrays;
+
+public class Order {
+	/*3.       
+
+
+
+
+
+Order {
+             orderid, totalprice
+           boolean status
+            Food [] orderedFoods;
+
+     task
+               calcuatePrice(String ptype)
+                         -- if ptye is cash no service charge
+                         -- if ptype is card --- 20rs
+                         -- if ptype is UPI --- 10 rs
+
+
+
+ }
+eg 
+pizza   100
+noodles 500
+Biryani  200
+Order o = new Order();
+o.calcualtePrice("upi")
+
+o/p   hey  your total price Rs 810/- pls pay the bill and enjoy your food*/
+	
+	private int orderid;
+	private int totalprice;
+	private boolean status;
+	private Food[] orderedFoods;
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
+	public int getTotalprice() {
+		return totalprice;
+	}
+	public void setTotalprice(int totalprice) {
+		this.totalprice = totalprice;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	public Food[] getOrderedFoods() {
+		return orderedFoods;
+	}
+	public void setOrderedFoods(Food[] orderedFoods) {
+		this.orderedFoods = orderedFoods;
+	}
+	public Order(int orderid, boolean status, Food[] orderedFoods) {
+		super();
+		this.orderid = orderid;
+//		this.totalprice = totalprice;
+		this.status = status;
+		this.orderedFoods = orderedFoods;
+	}
+	public void calculatePrice(String ptype) {
+		for(int i=0;i<orderedFoods.length;i++) {
+			if(ptype=="cash") {
+	
+			}else if(ptype=="card"){
+				totalprice=totalprice+20;
+			}else if(ptype=="UPI"){
+					totalprice=totalprice+10;
+				}
+				System.out.println(this);
+				
+			}
+		}
+	@Override
+	public String toString() {
+		return "Order [orderid=" + orderid + ", totalprice=" + totalprice + ", status=" + status + ", orderedFoods="
+				+ Arrays.toString(orderedFoods) + "]";
+	}
+	
+	
+	}

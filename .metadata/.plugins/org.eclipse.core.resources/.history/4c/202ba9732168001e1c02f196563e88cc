@@ -1,0 +1,38 @@
+package Player;
+
+public class Permanent extends Employee {
+
+	
+		// TODO Auto-generated method stub
+		
+		private String designation;
+		private int hikePercent;
+	  
+	  		
+		public String getDesignation() {
+			return designation;
+		}
+		public void setDesignation(String designation) {
+			this.designation = designation;
+		}
+		public int getHikePercent() {
+			return hikePercent;
+		}
+		public void setHikePercent(int hikePercent) {
+			this.hikePercent = hikePercent;
+		}
+
+		public Permanent(int employeeId, String employeeName, double baseSalary, String designation, int hikePercent) {
+	    super(employeeId, employeeName, baseSalary);
+		this.designation = designation;
+		this.hikePercent = hikePercent;
+		}
+
+		void calculateSalaryHike() {
+			double basesalary=super.getBaseSalary();
+			System.out.println("Permanent Employee Salary Hike: "+basesalary+(5*basesalary)/100);
+		}
+}
+		
+
+

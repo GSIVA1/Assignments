@@ -1,0 +1,20 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Food f1 = new Food(101,"Roti","True","North",300);
+		Food f2 = new Food(101,"Biryani","True","South",500);
+		Food f3 = new Food(101,"Noodles","True","China",1000);
+		
+		Food[] f = {f1,f2,f3};
+		
+	
+		Order Od = new Order(101,true,f);
+		Od.calculatePrice("cash");
+		
+
+	}
+
+}

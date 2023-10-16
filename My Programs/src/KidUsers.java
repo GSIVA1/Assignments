@@ -1,0 +1,16 @@
+
+public class KidUsers implements LibraryUser{
+	int age;
+	public void registerAccount(int age) {
+		public void registerAcount(int age) {
+			if(age<12) {
+				System.out.println(“You have successfully registered under a Kids Account”);
+				else {
+					System.out.println("“Sorry, Age must be less than 12 to register as a  kid");
+				}
+			}
+		}
+	}
+	
+
+}
